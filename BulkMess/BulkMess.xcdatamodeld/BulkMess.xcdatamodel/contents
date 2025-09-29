@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="Contact" representedClassName="Contact" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFromDeviceContacts" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="deviceContactIdentifier" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ContactGroup" inverseName="contacts" inverseEntity="ContactGroup"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="contact" inverseEntity="Message"/>
     </entity>
+
+    <entity name="ContactGroup" representedClassName="ContactGroup" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="colorHex" optional="YES" attributeType="String"/>
+        <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contact" inverseName="groups" inverseEntity="Contact"/>
+        <relationship name="campaigns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Campaign" inverseName="targetGroups" inverseEntity="Campaign"/>
+    </entity>
+
+    <entity name="MessageTemplate" representedClassName="MessageTemplate" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="content" attributeType="String"/>
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateModified" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFavorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="usageCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="campaigns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Campaign" inverseName="template" inverseEntity="Campaign"/>
+        <relationship name="followUpSequences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FollowUpMessage" inverseName="template" inverseEntity="FollowUpMessage"/>
+    </entity>
+
+    <entity name="Campaign" representedClassName="Campaign" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="scheduledDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" attributeType="String" defaultValueString="draft"/>
+        <attribute name="totalRecipients" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sentCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="failedCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isFollowUpEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="template" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MessageTemplate" inverseName="campaigns" inverseEntity="MessageTemplate"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="campaign" inverseEntity="Message"/>
+        <relationship name="targetGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ContactGroup" inverseName="campaigns" inverseEntity="ContactGroup"/>
+        <relationship name="followUpSequence" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FollowUpSequence" inverseName="campaign" inverseEntity="FollowUpSequence"/>
+    </entity>
+
+    <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
+        <attribute name="content" attributeType="String"/>
+        <attribute name="status" attributeType="String" defaultValueString="pending"/>
+        <attribute name="dateSent" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="errorMessage" optional="YES" attributeType="String"/>
+        <attribute name="isFollowUp" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="followUpStep" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isIncoming" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="dateReceived" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="contact" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="messages" inverseEntity="Contact"/>
+        <relationship name="campaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="messages" inverseEntity="Campaign"/>
+    </entity>
+
+    <entity name="FollowUpSequence" representedClassName="FollowUpSequence" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="isActive" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <relationship name="campaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="followUpSequence" inverseEntity="Campaign"/>
+        <relationship name="followUpMessages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FollowUpMessage" inverseName="sequence" inverseEntity="FollowUpMessage"/>
+    </entity>
+
+    <entity name="FollowUpMessage" representedClassName="FollowUpMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="stepNumber" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="delayDays" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="delayHours" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="template" maxCount="1" deletionRule="Nullify" destinationEntity="MessageTemplate" inverseName="followUpSequences" inverseEntity="MessageTemplate"/>
+        <relationship name="sequence" maxCount="1" deletionRule="Nullify" destinationEntity="FollowUpSequence" inverseName="followUpMessages" inverseEntity="FollowUpSequence"/>
+    </entity>
+
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Contact" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="ContactGroup" positionX="117" positionY="-9" width="128" height="104"/>
+        <element name="MessageTemplate" positionX="-252" positionY="-18" width="128" height="149"/>
+        <element name="Campaign" positionX="-441" positionY="-18" width="128" height="209"/>
+        <element name="Message" positionX="-63" positionY="171" width="128" height="149"/>
+        <element name="FollowUpSequence" positionX="-441" positionY="207" width="128" height="89"/>
+        <element name="FollowUpMessage" positionX="-252" positionY="207" width="128" height="104"/>
     </elements>
 </model>

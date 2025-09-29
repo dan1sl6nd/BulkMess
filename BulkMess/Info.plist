@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>NSContactsUsageDescription</key>
+    <string>BulkMess needs access to your Contacts to select recipients and personalize messages.</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>BulkMess can receive webhook events over your local network to automatically detect responses and cancel follow‑ups.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>bulkmess</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>bulkmess</string>
+			</array>
+		</dict>
+	</array>
+	<key>PRIVACY_URL</key>
+	<string>https://www.apple.com/legal/privacy/</string>
+	<key>TERMS_URL</key>
+	<string>https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+</dict>
+</plist>

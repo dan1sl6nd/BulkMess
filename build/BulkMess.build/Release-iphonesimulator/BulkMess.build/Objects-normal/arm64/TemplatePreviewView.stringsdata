@@ -1,0 +1,136 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/TemplatePreviewView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Template Preview",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create a template first to preview messages.",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add contacts to preview how templates will look.",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Templates",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Contacts",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Template",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Contact",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preview",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Template",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a template...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contact",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a contact...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Original Template",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Processed Message for %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "Placeholder Mappings",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 143
+        }
+      }
+    ]
+  },
+  "version": 1
+}

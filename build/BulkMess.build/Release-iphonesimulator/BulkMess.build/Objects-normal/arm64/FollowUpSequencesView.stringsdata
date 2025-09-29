@@ -1,0 +1,160 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/FollowUpSequencesView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Follow-ups",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create sequences of delayed follow-up messages using your templates.",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Follow-up Sequences",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 17
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld step%@",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "New Sequence",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit Sequence",
+        "location": {
+          "startingColumn": 65,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "Details",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "Steps",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sequence Name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Active",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "No steps yet. Add a step to start.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Step",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 132
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Template",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 179
+        }
+      },
+      {
+        "comment": "",
+        "key": "Step %lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "Days: %lld",
+        "location": {
+          "startingColumn": 69,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "Hours: %lld",
+        "location": {
+          "startingColumn": 69,
+          "startingLine": 186
+        }
+      }
+    ]
+  },
+  "version": 1
+}

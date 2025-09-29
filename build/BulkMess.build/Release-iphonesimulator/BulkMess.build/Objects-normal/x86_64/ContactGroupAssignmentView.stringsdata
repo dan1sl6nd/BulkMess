@@ -1,0 +1,72 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupAssignmentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Manage Groups",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Available Groups",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Toggle groups to add or remove this contact",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Groups Available",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create your first contact group to organize this contact",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create First Group",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 175
+        }
+      }
+    ]
+  },
+  "version": 1
+}

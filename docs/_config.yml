@@ -1,0 +1,61 @@
+# GitHub Pages configuration for BulkMess Support
+title: "BulkMess Support"
+description: "Professional SMS Campaign Manager - Support & Documentation"
+baseurl: ""
+url: "https://yourusername.github.io/BulkMess"
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+author: "BulkMess Team"
+twitter:
+  username: bulkmessapp
+  card: summary
+
+logo: /assets/images/logo.png
+
+# Social links
+github_username: yourusername
+email: support@bulkmessapp.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "BulkMess Support"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"

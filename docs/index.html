@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkMess Support - Professional SMS Campaign Manager</title>
+    <meta name="description" content="Get help with BulkMess - the professional SMS campaign manager for iOS. Find guides, report bugs, and get support.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BulkMess Support">
+    <meta property="og:description" content="Professional SMS campaign manager support and documentation">
+    <meta property="og:type" content="website">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-button {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .card-button:hover {
+            background: #5a6fd8;
+        }
+
+        .quick-links {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .quick-links h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+
+        .quick-link:hover {
+            background: #e9ecef;
+        }
+
+        .quick-link-icon {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .status-bar {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #28a745;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📱 BulkMess Support</h1>
+            <p class="subtitle">Professional SMS Campaign Manager for iOS</p>
+            <div class="hero-buttons">
+                <a href="https://github.com/yourusername/BulkMess/issues/new?template=bug_report.yml" class="btn btn-primary">Report Bug</a>
+                <a href="https://github.com/yourusername/BulkMess/issues/new?template=feature_request.yml" class="btn btn-outline">Request Feature</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="status-bar">
+                <span class="status-indicator"></span>
+                All systems operational • Average response time: 24 hours
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="card-icon">🐛</div>
+                    <h3 class="card-title">Report a Bug</h3>
+                    <p class="card-description">Found something that's not working? Let us know with detailed information and we'll fix it.</p>
+                    <a href="https://github.com/yourusername/BulkMess/issues/new?template=bug_report.yml" class="card-button">Report Bug</a>
+                </div>
+
+                <div class="support-card">
+                    <div class="card-icon">✨</div>
+                    <h3 class="card-title">Feature Request</h3>
+                    <p class="card-description">Have an idea to make BulkMess better? Share your feature suggestions with us.</p>
+                    <a href="https://github.com/yourusername/BulkMess/issues/new?template=feature_request.yml" class="card-button">Suggest Feature</a>
+                </div>
+
+                <div class="support-card">
+                    <div class="card-icon">❓</div>
+                    <h3 class="card-title">Get Help</h3>
+                    <p class="card-description">Need help using BulkMess? Ask questions and get answers from our support team.</p>
+                    <a href="https://github.com/yourusername/BulkMess/issues/new?template=support_question.yml" class="card-button">Ask Question</a>
+                </div>
+
+                <div class="support-card">
+                    <div class="card-icon">💬</div>
+                    <h3 class="card-title">Community</h3>
+                    <p class="card-description">Join discussions, share tips, and connect with other BulkMess users.</p>
+                    <a href="https://github.com/yourusername/BulkMess/discussions" class="card-button">Join Community</a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h2>📚 Documentation & Guides</h2>
+                <div class="links-grid">
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Getting-Started" class="quick-link">
+                        <span class="quick-link-icon">🚀</span>
+                        <span>Getting Started</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Contact-Management" class="quick-link">
+                        <span class="quick-link-icon">👥</span>
+                        <span>Contact Management</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Message-Templates" class="quick-link">
+                        <span class="quick-link-icon">📝</span>
+                        <span>Message Templates</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Campaign-Creation" class="quick-link">
+                        <span class="quick-link-icon">📊</span>
+                        <span>Campaign Creation</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Shortcuts-Integration" class="quick-link">
+                        <span class="quick-link-icon">🤖</span>
+                        <span>Shortcuts Integration</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Analytics" class="quick-link">
+                        <span class="quick-link-icon">📈</span>
+                        <span>Analytics & Reports</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h2>🔧 Troubleshooting</h2>
+                <div class="links-grid">
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Troubleshooting-Messages" class="quick-link">
+                        <span class="quick-link-icon">📱</span>
+                        <span>Message Sending Issues</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Troubleshooting-Contacts" class="quick-link">
+                        <span class="quick-link-icon">📋</span>
+                        <span>Contact Import Problems</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/Troubleshooting-Shortcuts" class="quick-link">
+                        <span class="quick-link-icon">⚙️</span>
+                        <span>Shortcuts Integration</span>
+                    </a>
+                    <a href="https://github.com/yourusername/BulkMess/wiki/FAQ" class="quick-link">
+                        <span class="quick-link-icon">💡</span>
+                        <span>FAQ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BulkMess. Built with ❤️ for professional communication.</p>
+            <p>Need immediate help? Email us at <strong>support@bulkmessapp.com</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple analytics (replace with your preferred analytics)
+        if (typeof gtag !== 'undefined') {
+            gtag('config', 'YOUR-GA-ID');
+        }
+
+        // Track button clicks
+        document.querySelectorAll('.card-button, .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'Support',
+                        'event_label': this.textContent
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

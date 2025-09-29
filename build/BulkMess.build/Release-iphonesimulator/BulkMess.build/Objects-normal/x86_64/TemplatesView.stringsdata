@@ -1,0 +1,112 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/TemplatesView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Templates",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Search...",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "Modified %@",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tap to edit",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Templates Yet",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 230
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create reusable message templates to save time when sending bulk messages",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create Template",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 245
+        }
+      },
+      {
+        "comment": "",
+        "key": "Templates can include:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 252
+        }
+      },
+      {
+        "comment": "",
+        "key": "Personalized names",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 261
+        }
+      },
+      {
+        "comment": "",
+        "key": "Dynamic dates",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 267
+        }
+      },
+      {
+        "comment": "",
+        "key": "Custom variables",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 273
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select a Template",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 294
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a template to view and edit its content",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 298
+        }
+      }
+    ]
+  },
+  "version": 1
+}

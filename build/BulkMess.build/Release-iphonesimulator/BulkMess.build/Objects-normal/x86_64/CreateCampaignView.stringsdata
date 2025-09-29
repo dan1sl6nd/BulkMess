@@ -1,0 +1,192 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CreateCampaignView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "New Campaign",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preview Template",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Contact Groups",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Contact Groups",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send Date & Time",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send Date",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create Campaign",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose Template",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 244
+        }
+      },
+      {
+        "comment": "",
+        "key": "New",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 254
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 345
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 375
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total Recipients",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 364
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unique contacts to receive messages",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 368
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 406
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Groups",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 451
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 455
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 461
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 487
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 542
+        }
+      },
+      {
+        "comment": "",
+        "key": "Template Preview",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 637
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sample Recipient",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 578
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 641
+        }
+      }
+    ]
+  },
+  "version": 1
+}

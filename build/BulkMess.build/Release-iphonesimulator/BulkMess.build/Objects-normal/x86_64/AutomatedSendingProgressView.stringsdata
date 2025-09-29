@@ -1,0 +1,88 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedSendingProgressView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Sending Messages",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 129
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preparing to send...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Complete",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Batch %lld of %lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sending completed",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Errors (%lld)",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "... and %lld more",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 138
+        }
+      }
+    ]
+  },
+  "version": 1
+}

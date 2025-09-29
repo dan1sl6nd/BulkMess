@@ -1,0 +1,366 @@
+{
+  "" : {
+    "const-values" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.swiftconstvalues",
+    "dependencies" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.d",
+    "diagnostics" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.dia",
+    "emit-module-dependencies" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary-emit-module.dia",
+    "pch" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.swiftdeps"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/BulkMessApp.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMessApp.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMessApp.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMessApp.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/ContentView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Extensions/Array+Extensions.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Array+Extensions.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Array+Extensions.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Array+Extensions.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Extensions/ColorExtensions.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ColorExtensions.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ColorExtensions.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ColorExtensions.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/CampaignManager.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignManager.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignManager.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignManager.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/ContactManager.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactManager.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactManager.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactManager.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/DeliverySettings.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DeliverySettings.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DeliverySettings.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DeliverySettings.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/ErrorHandler.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ErrorHandler.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ErrorHandler.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ErrorHandler.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/MessageTemplateManager.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplateManager.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplateManager.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplateManager.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Persistence.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Persistence.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Persistence.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Persistence.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Preview/PreviewHelpers.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PreviewHelpers.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PreviewHelpers.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PreviewHelpers.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/AutomatedMessagingService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedMessagingService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedMessagingService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedMessagingService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/BulkAutomatedMessagingService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkAutomatedMessagingService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkAutomatedMessagingService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkAutomatedMessagingService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/BundledShortcutsService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BundledShortcutsService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BundledShortcutsService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BundledShortcutsService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/FollowUpService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/MessageMonitoringService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageMonitoringService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageMonitoringService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageMonitoringService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/MessagingService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessagingService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessagingService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessagingService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/NotificationCenterHandler.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/NotificationCenterHandler.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/NotificationCenterHandler.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/NotificationCenterHandler.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/PurchaseService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PurchaseService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PurchaseService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PurchaseService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/ServiceContainer.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ServiceContainer.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ServiceContainer.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ServiceContainer.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/ShortcutsManager.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsManager.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsManager.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsManager.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/ShortcutsService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/TrueAutomatedMessagingService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TrueAutomatedMessagingService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TrueAutomatedMessagingService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TrueAutomatedMessagingService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Services/WebhookService.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/WebhookService.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/WebhookService.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/WebhookService.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/UI/DesignSystem.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DesignSystem.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DesignSystem.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/DesignSystem.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AddContactGroupView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactGroupView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactGroupView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactGroupView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AddContactView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddContactView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AddTemplateView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddTemplateView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddTemplateView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AddTemplateView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AnalyticsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AnalyticsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AnalyticsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AnalyticsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedIntegrationView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedIntegrationView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedIntegrationView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedIntegrationView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedSendingProgressView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingProgressView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingProgressView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingProgressView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedSendingResultView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingResultView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingResultView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingResultView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedSendingView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/AutomatedSendingView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CampaignDetailView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignDetailView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignDetailView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignDetailView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CampaignsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CampaignsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactDetailView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactDetailView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactDetailView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactDetailView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupAssignmentView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupAssignmentView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupAssignmentView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupAssignmentView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupDetailView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupDetailView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupDetailView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupDetailView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroupsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CreateCampaignView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CreateCampaignView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CreateCampaignView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CreateCampaignView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CursorAwareTextEditor.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CursorAwareTextEditor.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CursorAwareTextEditor.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/CursorAwareTextEditor.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/FollowUpSequencesView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequencesView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequencesView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequencesView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/MainTabView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MainTabView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MainTabView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MainTabView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/MessageReceiptView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageReceiptView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageReceiptView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageReceiptView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/PaywallView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PaywallView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PaywallView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PaywallView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/PendingFollowUpsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PendingFollowUpsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PendingFollowUpsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/PendingFollowUpsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/SettingsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShareSheet.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShareSheet.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShareSheet.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShareSheet.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutSetupInstructionsView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutSetupInstructionsView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutSetupInstructionsView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutSetupInstructionsView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutsAutoSetupView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsAutoSetupView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsAutoSetupView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsAutoSetupView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutsSetupView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsSetupView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsSetupView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ShortcutsSetupView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/TemplateDetailView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplateDetailView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplateDetailView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplateDetailView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/TemplatePreviewView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatePreviewView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatePreviewView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatePreviewView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/TemplatesView.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatesView.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatesView.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/TemplatesView.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/BulkMess+CoreDataModel.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess+CoreDataModel.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess+CoreDataModel.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess+CoreDataModel.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Campaign+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Campaign+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Campaign+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Contact+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Contact+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Contact+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/ContactGroup+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/ContactGroup+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/ContactGroup+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/FollowUpMessage+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/FollowUpMessage+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpMessage+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/FollowUpSequence+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/FollowUpSequence+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/FollowUpSequence+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Message+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/Message+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/Message+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/MessageTemplate+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataClass.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataClass.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataClass.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/CoreDataGenerated/BulkMess/MessageTemplate+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataProperties.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataProperties.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/MessageTemplate+CoreDataProperties.o"
+  },
+  "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

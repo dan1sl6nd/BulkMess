@@ -1,0 +1,56 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutsAutoSetupView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Shortcuts Setup",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manual Setup Required",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create iOS Shortcuts for automated message sending",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shortcuts Setup",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 12
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open iOS Shortcuts App",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Due to iOS limitations, shortcuts must be created manually in the Shortcuts app. Please refer to the documentation for detailed instructions.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 34
+        }
+      }
+    ]
+  },
+  "version": 1
+}

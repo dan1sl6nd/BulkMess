@@ -1,0 +1,12 @@
+{
+  "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Extensions/Array+Extensions.swift" : {
+    "abi-baseline-json" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess.abi.json",
+    "const-values" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.swiftconstvalues",
+    "dependencies" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.d",
+    "diagnostics" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-primary.dia",
+    "objc-header" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess-Swift.h",
+    "swiftdoc" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess.swiftdoc",
+    "swiftmodule" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess.swiftmodule",
+    "swiftsourceinfo" : "/Users/dan1sland/Documents/Claude/BulkMess/build/BulkMess.build/Release-iphonesimulator/BulkMess.build/Objects-normal/arm64/BulkMess.swiftsourceinfo"
+  }
+}

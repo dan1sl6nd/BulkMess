@@ -1,0 +1,184 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CampaignsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Campaigns",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add contacts first",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "New Campaign",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "Get BulkMess Shortcut",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "Progress",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "%d/%d",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "%d/%d",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 395
+        }
+      },
+      {
+        "comment": "",
+        "key": "(%d failed)",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 400
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Campaigns Yet",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 420
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create your first campaign to send bulk messages to multiple contacts at once",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 424
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create Campaign",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 436
+        }
+      },
+      {
+        "comment": "",
+        "key": "Before creating campaigns:",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 443
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create message templates",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 452
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add or import contacts",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 459
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaign features:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 468
+        }
+      },
+      {
+        "comment": "",
+        "key": "Batch sending with delays",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 477
+        }
+      },
+      {
+        "comment": "",
+        "key": "Real-time analytics",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 483
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send via Apple Shortcuts",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 489
+        }
+      },
+      {
+        "comment": "",
+        "key": "Schedule campaigns",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 495
+        }
+      },
+      {
+        "comment": "",
+        "key": "Get BulkMess Shortcut",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 510
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select a Campaign",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 531
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a campaign to view its progress and details",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 535
+        }
+      }
+    ]
+  },
+  "version": 1
+}

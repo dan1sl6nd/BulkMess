@@ -1,0 +1,152 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedSendingView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Automated Sending",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send %lld Messages",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sending Method",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Batch Settings",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimated Performance",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shortcut Setup",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld messages ready to send",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "Batch Size",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld messages",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delay Between Batches",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "%.1f seconds",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Setup Instructions",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Learn how to create the required iOS Shortcut",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send via %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 169
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send via %@",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 179
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will copy message data to clipboard and run an iOS Shortcut for automated bulk sending. Make sure you have the required shortcut installed.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 184
+        }
+      }
+    ]
+  },
+  "version": 1
+}

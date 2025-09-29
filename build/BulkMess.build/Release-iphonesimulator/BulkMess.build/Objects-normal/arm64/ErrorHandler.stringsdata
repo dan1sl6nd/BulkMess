@@ -1,0 +1,32 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Models/ErrorHandler.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Error",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Details",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 159
+        }
+      }
+    ]
+  },
+  "version": 1
+}

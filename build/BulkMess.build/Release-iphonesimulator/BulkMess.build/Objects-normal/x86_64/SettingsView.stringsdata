@@ -1,0 +1,176 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contacts Permission Required",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Version 1.0.0",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send messages to hundreds of contacts",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "About BulkMess",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total Contacts",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contacts available in your library",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sync Device Contacts",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Settings",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "Please enable contacts access in Settings to import your device contacts.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contacts Access",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "About",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 348
+        }
+      },
+      {
+        "comment": "",
+        "key": "BulkMess",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 264
+        }
+      },
+      {
+        "comment": "",
+        "key": "Version 1.0.0",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 268
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send personalized messages to hundreds of contacts with customizable templates and Shortcuts integration.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 278
+        }
+      },
+      {
+        "comment": "",
+        "key": "Built for efficiency, designed for simplicity.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 283
+        }
+      },
+      {
+        "comment": "",
+        "key": "Made with ❤️ for effective communication",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 333
+        }
+      },
+      {
+        "comment": "",
+        "key": "© 2024 BulkMess. All rights reserved.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 338
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 352
+        }
+      }
+    ]
+  },
+  "version": 1
+}

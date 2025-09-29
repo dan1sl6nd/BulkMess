@@ -1,0 +1,264 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/CampaignDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Campaign Details",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete Campaign?",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send Campaign?",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send Campaign",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete Campaign",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will permanently delete the campaign and all associated data. This action cannot be undone.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will send the campaign to %lld recipients. This action cannot be undone.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Created %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scheduled for %@ at %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "Progress",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 217
+        }
+      },
+      {
+        "comment": "",
+        "key": "Success Rate",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 246
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message Template",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 306
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recipients",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 333
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 349
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total Recipients",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 359
+        }
+      },
+      {
+        "comment": "",
+        "key": "%d",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 362
+        }
+      },
+      {
+        "comment": "",
+        "key": "Follow-ups",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 386
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enable Follow-ups",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 391
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sequence",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 395
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a sequence",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 396
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manage Sequences",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 404
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send Campaign",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 434
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send via Shortcuts",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 450
+        }
+      },
+      {
+        "comment": "",
+        "key": "Get BulkMess Shortcut",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 467
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaign is currently sending...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 480
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaign completed successfully",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 491
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaign completed with errors",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 502
+        }
+      }
+    ]
+  },
+  "version": 1
+}

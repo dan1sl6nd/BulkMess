@@ -1,0 +1,72 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AddContactGroupView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "New Group",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "New Contact Group",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create a group to organize your contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Group Name",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enter group name",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "Group Color",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create Group",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 102
+        }
+      }
+    ]
+  },
+  "version": 1
+}

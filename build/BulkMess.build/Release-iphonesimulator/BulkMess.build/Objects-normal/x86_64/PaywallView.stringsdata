@@ -1,0 +1,176 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/PaywallView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Error",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "FREE",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "per day",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "Restore",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 304
+        }
+      },
+      {
+        "comment": "",
+        "key": "Stop Sending Messages",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 326
+        }
+      },
+      {
+        "comment": "",
+        "key": "One by One",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 330
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reach hundreds of contacts instantly with personalized bulk messaging and smart templates",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 334
+        }
+      },
+      {
+        "comment": "",
+        "key": "Everything You Need",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 532
+        }
+      },
+      {
+        "comment": "",
+        "key": "Join 10,000+ users already using BulkMess to enhance their messaging workflow",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 624
+        }
+      },
+      {
+        "comment": "",
+        "key": "4.9",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 609
+        }
+      },
+      {
+        "comment": "",
+        "key": "average rating",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 613
+        }
+      },
+      {
+        "comment": "",
+        "key": "Success Stories",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 641
+        }
+      },
+      {
+        "comment": "",
+        "key": "Frequently Asked Questions",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 719
+        }
+      },
+      {
+        "comment": "",
+        "key": "START FREE TRIAL",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 821
+        }
+      },
+      {
+        "comment": "",
+        "key": "GO UNLIMITED",
+        "location": {
+          "startingColumn": 81,
+          "startingLine": 821
+        }
+      },
+      {
+        "comment": "",
+        "key": "3 days free, then $9.99/week",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 825
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save 69% with yearly plan",
+        "location": {
+          "startingColumn": 93,
+          "startingLine": 825
+        }
+      },
+      {
+        "comment": "",
+        "key": "Terms of Use",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 851
+        }
+      },
+      {
+        "comment": "",
+        "key": "Restore",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 855
+        }
+      },
+      {
+        "comment": "",
+        "key": "Privacy Policy",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 863
+        }
+      }
+    ]
+  },
+  "version": 1
+}

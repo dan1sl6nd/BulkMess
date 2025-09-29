@@ -1,0 +1,48 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/MainTabView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Contacts",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Templates",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaigns",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "Analytics",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 34
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Contact Groups",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "Created %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Contact Groups",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create groups to organize your contacts by category, project, or any way that makes sense",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create First Group",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 201
+        }
+      },
+      {
+        "comment": "",
+        "key": "Group Benefits",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 209
+        }
+      }
+    ]
+  },
+  "version": 1
+}

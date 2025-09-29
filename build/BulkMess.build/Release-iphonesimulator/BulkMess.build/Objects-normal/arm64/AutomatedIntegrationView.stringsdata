@@ -1,0 +1,136 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AutomatedIntegrationView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Automated Integration",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "Integration Methods",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Server Status",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Testing",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "URL Scheme Examples",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 112
+        }
+      },
+      {
+        "comment": "",
+        "key": "Automated Response Detection",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Automatically cancel follow-ups when contacts respond to your campaigns.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Webhook server running",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Port 8080 - %lld webhooks received",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "Test Integration",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "Phone Number",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "Test Message",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Test Response Recording",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "Setup Guide",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 293
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 297
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 316
+        }
+      }
+    ]
+  },
+  "version": 1
+}

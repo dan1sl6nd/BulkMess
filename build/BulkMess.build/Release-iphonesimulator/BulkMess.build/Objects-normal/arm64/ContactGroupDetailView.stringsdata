@@ -1,0 +1,184 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactGroupDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld Contacts",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit Group",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete Group",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "Created %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Contacts in Group",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add contacts to this group to organize them together",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 180
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Contacts",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "Search...",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 260
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add to %@",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 261
+        }
+      },
+      {
+        "comment": "",
+        "key": "All contacts are already in this group",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 232
+        }
+      },
+      {
+        "comment": "",
+        "key": "No contacts found",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 232
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add (%lld)",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 271
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit Group",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 484
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit Group",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 421
+        }
+      },
+      {
+        "comment": "",
+        "key": "Group Name",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 429
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enter group name",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 433
+        }
+      },
+      {
+        "comment": "",
+        "key": "Group Color",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 440
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save Changes",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 473
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 488
+        }
+      }
+    ]
+  },
+  "version": 1
+}

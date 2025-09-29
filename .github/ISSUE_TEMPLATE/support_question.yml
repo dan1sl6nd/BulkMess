@@ -1,0 +1,62 @@
+name: ❓ Support Question
+description: Ask a question about using BulkMess
+title: "[Question] "
+labels: ["question", "support"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about using BulkMess? We're here to help! Please provide as much detail as possible.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know about BulkMess?
+      placeholder: "Ask your question here..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What area is your question about?
+      options:
+        - Getting Started
+        - Contact Management
+        - Message Templates
+        - Campaign Setup
+        - Automated Sending
+        - Shortcuts Integration
+        - Analytics & Reporting
+        - Follow-up Sequences
+        - Troubleshooting
+        - Account & Billing
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Provide any additional context that might help us answer your question.
+      placeholder: "Any additional details that might be helpful..."
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What Have You Tried?
+      description: Have you tried any solutions or looked at any documentation?
+      placeholder: "Describe what you've already tried..."
+
+  - type: checkboxes
+    id: documentation
+    attributes:
+      label: Documentation Check
+      options:
+        - label: I have searched existing issues and discussions
+        - label: I have checked the app's help section (if available)
+        - label: I have tried basic troubleshooting steps

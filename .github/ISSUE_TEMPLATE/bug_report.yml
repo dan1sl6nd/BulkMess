@@ -1,0 +1,117 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in BulkMess
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us understand and fix the issue.
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App Version
+      description: What version of BulkMess are you using?
+      placeholder: "e.g., 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ios-version
+    attributes:
+      label: iOS Version
+      description: What version of iOS are you running?
+      options:
+        - iOS 17.x
+        - iOS 16.x
+        - iOS 15.x
+        - iOS 14.x
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      description: What device are you using?
+      options:
+        - iPhone 15 Pro Max
+        - iPhone 15 Pro
+        - iPhone 15 Plus
+        - iPhone 15
+        - iPhone 14 Pro Max
+        - iPhone 14 Pro
+        - iPhone 14 Plus
+        - iPhone 14
+        - iPhone 13 Pro Max
+        - iPhone 13 Pro
+        - iPhone 13
+        - iPhone 13 mini
+        - iPhone 12 Pro Max
+        - iPhone 12 Pro
+        - iPhone 12
+        - iPhone 12 mini
+        - iPhone SE (3rd generation)
+        - iPhone SE (2nd generation)
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "Describe what happened..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Tap on '...'
+        3. Enter '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "Describe what you expected to happen..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: "Drag and drop images here or paste them"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+      placeholder: "Any additional information that might be helpful..."
+
+  - type: checkboxes
+    id: troubleshooting
+    attributes:
+      label: Troubleshooting Checklist
+      description: Please confirm you've tried these basic troubleshooting steps
+      options:
+        - label: I have restarted the app
+        - label: I have restarted my device
+        - label: I have the latest version of the app installed
+        - label: I have checked if this issue has already been reported

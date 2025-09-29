@@ -1,0 +1,104 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AddContactView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Add Contact",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "Invalid Contact",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contact Information",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "First Name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Phone Number",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Email (Optional)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes (Optional)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 52
+        }
+      }
+    ]
+  },
+  "version": 1
+}

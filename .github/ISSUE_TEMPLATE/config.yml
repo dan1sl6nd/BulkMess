@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📧 Email Support
+    url: mailto:support@bulkmessapp.com
+    about: Send us an email for private support inquiries
+  - name: 📖 Documentation
+    url: https://github.com/yourusername/BulkMess/wiki
+    about: Check our comprehensive documentation and guides
+  - name: 💬 Discussions
+    url: https://github.com/yourusername/BulkMess/discussions
+    about: Join community discussions and share tips

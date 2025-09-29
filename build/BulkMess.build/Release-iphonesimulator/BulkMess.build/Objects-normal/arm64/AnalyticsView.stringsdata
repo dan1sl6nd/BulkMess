@@ -1,0 +1,56 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/AnalyticsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Analytics",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "Progress",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 357
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 361
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Analytics Yet",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 468
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send your first campaigns to see detailed performance metrics and insights",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 472
+        }
+      },
+      {
+        "comment": "",
+        "key": "Analytics will show:",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 480
+        }
+      }
+    ]
+  },
+  "version": 1
+}

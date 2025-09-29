@@ -1,0 +1,136 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/MessageReceiptView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Record Message Receipt",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message Activity",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 11
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recent Responses:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 17
+        }
+      },
+      {
+        "comment": "",
+        "key": "Mark as Responded",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message content (optional)",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Record",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Mark this contact as having responded to cancel any pending follow-ups.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Response Tracking",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Response Rate: %.1f%%",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manage Responses",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "Response Management",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Campaign Recipients",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "Toggle responses to cancel or restore follow-ups for specific contacts.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 168
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 232
+        }
+      }
+    ]
+  },
+  "version": 1
+}

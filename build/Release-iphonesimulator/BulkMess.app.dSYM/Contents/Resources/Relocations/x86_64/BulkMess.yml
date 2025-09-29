@@ -1,0 +1,5 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/dan1sland/Documents/Claude/BulkMess/build/Release-iphonesimulator/BulkMess.app/BulkMess'
+relocations:     []
+...

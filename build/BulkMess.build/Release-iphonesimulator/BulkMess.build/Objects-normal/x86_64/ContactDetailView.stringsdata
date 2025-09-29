@@ -1,0 +1,168 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contact Information",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Metadata",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Device Contact",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add to Group",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manage Groups",
+        "location": {
+          "startingColumn": 76,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "Groups (%lld)",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "Invalid Contact",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 240
+        }
+      },
+      {
+        "comment": "",
+        "key": "Contact Information",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "First Name",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Name",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 220
+        }
+      },
+      {
+        "comment": "",
+        "key": "Phone Number",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 221
+        }
+      },
+      {
+        "comment": "",
+        "key": "Email (Optional)",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 223
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notes (Optional)",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 229
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save Changes",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 241
+        }
+      }
+    ]
+  },
+  "version": 1
+}

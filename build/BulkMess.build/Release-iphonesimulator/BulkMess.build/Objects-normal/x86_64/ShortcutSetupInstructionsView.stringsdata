@@ -1,0 +1,192 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutSetupInstructionsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Shortcut Setup",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create an iOS Shortcut to enable automated bulk message sending",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Setup %@ Shortcut",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will open the iOS Shortcuts app where you can create the required shortcut",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Shortcuts App",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Step-by-Step Instructions",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shortcut Template",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy Template to Clipboard",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "Important Notes",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "• The shortcut name must match exactly: '%@'",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "• Enable 'Allow Running Scripts' in iOS Settings → Shortcuts → Advanced",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "• Turn OFF 'Ask Before Running' in the shortcut settings",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 127
+        }
+      },
+      {
+        "comment": "",
+        "key": "• The shortcut will read message data from the clipboard",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "• Test the shortcut with a few messages first",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 129
+        }
+      },
+      {
+        "comment": "",
+        "key": "Troubleshooting",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 140
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shortcut not found",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Messages not sending",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manual approval required",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Make sure the shortcut name matches exactly and is saved in the iOS Shortcuts app.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "Check that 'Allow Running Scripts' is enabled in iOS Settings → Shortcuts → Advanced.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Turn OFF 'Ask Before Running' in the shortcut's settings (tap the shortcut, then settings icon).",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 169
+        }
+      }
+    ]
+  },
+  "version": 1
+}

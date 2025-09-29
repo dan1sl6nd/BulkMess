@@ -1,0 +1,136 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ContactsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Contacts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Search...",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Manage Groups",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sync Contacts",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Contact",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Grant Access",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 290
+        }
+      },
+      {
+        "comment": "",
+        "key": "Access to Contacts Required",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 279
+        }
+      },
+      {
+        "comment": "",
+        "key": "To import and manage your contacts, please grant access to your device contacts.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 283
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Contacts Yet",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 313
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add your first contact to start sending messages",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 317
+        }
+      },
+      {
+        "comment": "",
+        "key": "or pull down to sync your device contacts",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 334
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Contact",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 328
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select a Contact",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 352
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose a contact to view their details",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 356
+        }
+      }
+    ]
+  },
+  "version": 1
+}

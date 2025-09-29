@@ -1,0 +1,72 @@
+{
+  "source": "/Users/dan1sland/Documents/Claude/BulkMess/BulkMess/Views/ShortcutsSetupView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Shortcuts Setup",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set Up ‘%@’ Shortcut",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 11
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy Sample Payload",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Shortcuts",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create a Shortcut named ‘%@’ with these actions:",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "•",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sample Payload",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 94
+        }
+      }
+    ]
+  },
+  "version": 1
+}
