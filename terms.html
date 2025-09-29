@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkMess Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #007AFF;
+            margin-bottom: 40px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #007AFF;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        h2 {
+            color: #007AFF;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin: 30px 0 15px 0;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: #0051D0;
+            transform: scale(1.05);
+        }
+
+        .terms-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #E5E5E7;
+            margin: 20px 0;
+        }
+
+        .important-notice {
+            background: #FFF9E6;
+            border: 2px solid #FF9500;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #1D1D1F;
+        }
+
+        .contact-info {
+            background: #F2FFF2;
+            border: 2px solid #34C759;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            color: #1D1D1F;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin: 8px 0;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        .last-updated {
+            background: #E5E5E7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Dark Mode Styles */
+        [data-theme="dark"] {
+            background-color: #1C1C1E;
+        }
+
+        [data-theme="dark"] body {
+            background-color: #1C1C1E;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] .container {
+            background-color: #1C1C1E;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4 {
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] h2 {
+            border-bottom-color: #48484A;
+        }
+
+        [data-theme="dark"] .header {
+            border-bottom-color: #0A84FF;
+        }
+
+        [data-theme="dark"] .app-icon {
+            background: linear-gradient(135deg, #0A84FF, #5E5CE6);
+        }
+
+        [data-theme="dark"] .terms-section {
+            background: #2C2C2E;
+            border-color: #48484A;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] .important-notice {
+            background: #2C1F00;
+            border-color: #FF9F0A;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] .contact-info {
+            background: #1F2C1F;
+            border-color: #32D74B;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] .footer {
+            border-top-color: #48484A;
+            color: #8E8E93;
+        }
+
+        [data-theme="dark"] .last-updated {
+            background: #2C2C2E;
+            color: #F2F2F7;
+        }
+
+        [data-theme="dark"] a {
+            color: #0A84FF;
+        }
+
+        [data-theme="dark"] a:hover {
+            color: #409CFF;
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            background: #32D74B;
+        }
+
+        [data-theme="dark"] .theme-toggle:hover {
+            background: #248A3D;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">🌙 Dark</button>
+    <div class="container">
+        <header class="header">
+            <div class="app-icon">BM</div>
+            <h1>BulkMess Terms of Service</h1>
+            <p class="subtitle">Terms and conditions for using the BulkMess application</p>
+        </header>
+
+        <div class="last-updated">
+            <strong>Last Updated:</strong> September 28, 2024 • <strong>Effective Date:</strong> September 28, 2024
+        </div>
+
+        <div class="important-notice">
+            <h3>⚠️ Important Notice</h3>
+            <p>By downloading, installing, or using BulkMess, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+        </div>
+
+        <h2>📝 Agreement to Terms</h2>
+
+        <div class="terms-section">
+            <h3>Acceptance of Terms</h3>
+            <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User" or "you") and Daniil Mukashev ("we," "us," or "our") regarding your use of the BulkMess mobile application ("App" or "Service").</p>
+
+            <p>By accessing or using BulkMess, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <h2>📱 Description of Service</h2>
+
+        <div class="terms-section">
+            <h3>What BulkMess Does</h3>
+            <p>BulkMess is an iOS application that helps users manage and send SMS campaigns through integration with iOS Messages. The app provides:</p>
+            <ul>
+                <li>Contact management and organization</li>
+                <li>Message template creation and customization</li>
+                <li>Bulk SMS campaign management</li>
+                <li>Campaign analytics and reporting</li>
+                <li>iOS Shortcuts integration</li>
+                <li>Automated messaging features (premium)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Acceptable Use</h2>
+
+        <div class="terms-section">
+            <h3>Permitted Uses</h3>
+            <p>You may use BulkMess for legitimate business and personal communication purposes, including:</p>
+            <ul>
+                <li>Business communications and marketing</li>
+                <li>Event coordination and notifications</li>
+                <li>Personal messaging to contacts</li>
+                <li>Customer service communications</li>
+                <li>Educational or non-profit communications</li>
+            </ul>
+
+            <h3>Prohibited Uses</h3>
+            <p>You agree NOT to use BulkMess for:</p>
+            <ul>
+                <li>❌ Sending spam, unsolicited, or bulk commercial messages</li>
+                <li>❌ Harassment, threats, or abusive communications</li>
+                <li>❌ Fraudulent, deceptive, or misleading messages</li>
+                <li>❌ Violating applicable laws or regulations</li>
+                <li>❌ Circumventing carrier limitations or restrictions</li>
+                <li>❌ Sending messages to contacts without proper consent</li>
+                <li>❌ Illegal activities or promoting illegal content</li>
+                <li>❌ Violating third-party rights or privacy</li>
+            </ul>
+        </div>
+
+        <h2>💰 Subscription Terms</h2>
+
+        <div class="terms-section">
+            <h3>Subscription Plans</h3>
+            <p>BulkMess offers the following subscription options:</p>
+            <ul>
+                <li><strong>Weekly Plan:</strong> $9.99/week with 3-day free trial</li>
+                <li><strong>Yearly Plan:</strong> $36.99/year (69% savings)</li>
+            </ul>
+
+            <h3>Free Trial</h3>
+            <p>New users may be eligible for a free trial period. Free trials:</p>
+            <ul>
+                <li>Are limited to first-time subscribers</li>
+                <li>Automatically convert to paid subscriptions unless cancelled</li>
+                <li>Can be cancelled anytime during the trial period</li>
+                <li>Provide access to premium features during the trial</li>
+            </ul>
+
+            <h3>Billing and Renewal</h3>
+            <ul>
+                <li>Subscriptions are billed through your Apple ID account</li>
+                <li>Payment is charged to your Apple ID account at confirmation of purchase</li>
+                <li>Subscriptions automatically renew unless auto-renewal is turned off at least 24 hours before the current period ends</li>
+                <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                <li>You can manage and cancel your subscription by going to your account settings on the App Store after purchase</li>
+            </ul>
+
+            <h3>Cancellation</h3>
+            <p>You may cancel your subscription at any time by:</p>
+            <ol>
+                <li>Going to iOS Settings > [Your Name] > Subscriptions</li>
+                <li>Selecting BulkMess from your active subscriptions</li>
+                <li>Choosing "Cancel Subscription"</li>
+            </ol>
+            <p>Cancellations take effect at the end of the current billing period.</p>
+        </div>
+
+        <h2>📞 Message Delivery and Limitations</h2>
+
+        <div class="terms-section">
+            <h3>Message Delivery</h3>
+            <p>BulkMess relies on iOS Messages and your cellular carrier for message delivery. We cannot guarantee:</p>
+            <ul>
+                <li>Successful delivery of all messages</li>
+                <li>Delivery timing or speed</li>
+                <li>Carrier compliance or restrictions</li>
+                <li>Network availability or reliability</li>
+            </ul>
+
+            <h3>Carrier Charges</h3>
+            <p>Standard messaging rates from your wireless carrier may apply. You are responsible for any carrier charges incurred through use of the app.</p>
+
+            <h3>Usage Limitations</h3>
+            <p>You acknowledge that excessive messaging may result in:</p>
+            <ul>
+                <li>Carrier blocking or filtering</li>
+                <li>Reduced delivery rates</li>
+                <li>Account suspension by your carrier</li>
+                <li>Legal consequences for spam or violations</li>
+            </ul>
+        </div>
+
+        <h2>🔒 Data and Privacy</h2>
+
+        <div class="terms-section">
+            <h3>Data Storage</h3>
+            <p>BulkMess stores all your data locally on your device. We do not upload your contacts, messages, or campaign data to our servers.</p>
+
+            <h3>Privacy Protection</h3>
+            <p>Your privacy is important to us. Please review our <a href="privacy.html">Privacy Policy</a> to understand how we handle your information.</p>
+
+            <h3>User Responsibility</h3>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Obtaining proper consent before messaging contacts</li>
+                <li>Complying with applicable privacy laws</li>
+                <li>Protecting your device and data</li>
+                <li>Backing up important information</li>
+            </ul>
+        </div>
+
+        <h2>⚠️ Disclaimers and Limitations</h2>
+
+        <div class="terms-section">
+            <h3>Service Availability</h3>
+            <p>BulkMess is provided "as is" without warranties of any kind. We do not guarantee:</p>
+            <ul>
+                <li>Continuous, uninterrupted service availability</li>
+                <li>Error-free or bug-free operation</li>
+                <li>Compatibility with all devices or iOS versions</li>
+                <li>Protection against data loss</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <p>To the maximum extent permitted by law, we shall not be liable for:</p>
+            <ul>
+                <li>Direct, indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, data, or business opportunities</li>
+                <li>Damages resulting from message delivery failures</li>
+                <li>Legal consequences of your message content or usage</li>
+                <li>Third-party actions or carrier restrictions</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Changes and Updates</h2>
+
+        <div class="terms-section">
+            <h3>Terms Updates</h3>
+            <p>We may modify these Terms at any time. When we make changes:</p>
+            <ol>
+                <li>We'll update the "Last Updated" date</li>
+                <li>Significant changes will be announced in the app</li>
+                <li>Continued use constitutes acceptance of new terms</li>
+                <li>You'll be notified of material changes affecting your rights</li>
+            </ol>
+
+            <h3>App Updates</h3>
+            <p>We may release updates to improve functionality, fix bugs, or add features. Some updates may be required for continued service access.</p>
+        </div>
+
+        <h2>⚖️ Legal and Compliance</h2>
+
+        <div class="terms-section">
+            <h3>Governing Law</h3>
+            <p>These Terms are governed by and construed in accordance with the laws of the jurisdiction where the developer is located, without regard to conflict of law principles.</p>
+
+            <h3>Compliance</h3>
+            <p>You agree to comply with all applicable laws and regulations, including:</p>
+            <ul>
+                <li>CAN-SPAM Act (United States)</li>
+                <li>GDPR (European Union)</li>
+                <li>TCPA (Telephone Consumer Protection Act)</li>
+                <li>Local messaging and privacy laws</li>
+            </ul>
+
+            <h3>Dispute Resolution</h3>
+            <p>Any disputes arising from these Terms or your use of BulkMess will be resolved through binding arbitration, except where prohibited by law.</p>
+        </div>
+
+        <h2>🚫 Termination</h2>
+
+        <div class="terms-section">
+            <h3>Termination by You</h3>
+            <p>You may stop using BulkMess at any time by:</p>
+            <ul>
+                <li>Deleting the app from your device</li>
+                <li>Cancelling your subscription (if applicable)</li>
+                <li>Discontinuing use of the service</li>
+            </ul>
+
+            <h3>Termination by Us</h3>
+            <p>We may suspend or terminate your access to BulkMess if you:</p>
+            <ul>
+                <li>Violate these Terms of Service</li>
+                <li>Use the app for prohibited purposes</li>
+                <li>Engage in fraudulent activity</li>
+                <li>Harm the service or other users</li>
+            </ul>
+
+            <h3>Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your access to premium features will cease</li>
+                <li>Local data remains on your device</li>
+                <li>Subscription charges will continue until cancelled</li>
+                <li>These Terms remain in effect for resolved matters</li>
+            </ul>
+        </div>
+
+        <h2>📞 Contact Information</h2>
+
+        <div class="contact-info">
+            <h3>Questions About These Terms?</h3>
+            <p>If you have questions about these Terms of Service:</p>
+            <p><strong>Email:</strong> support@bulkmessapp.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/dan1sl6nd/BulkMess/issues">Create an issue</a></p>
+            <p><strong>Support:</strong> <a href="support.html">BulkMess Support</a></p>
+            <p><strong>Privacy:</strong> <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+
+        <div class="terms-section">
+            <h3>Legal Contact</h3>
+            <p>For legal matters or compliance questions:</p>
+            <p><strong>Contact:</strong> legal@bulkmessapp.com</p>
+            <p><strong>Subject Line:</strong> "Legal Inquiry - BulkMess Terms"</p>
+        </div>
+
+        <footer class="footer">
+            <p><strong>BulkMess</strong> - Professional SMS Campaign Management</p>
+            <p><em>These terms protect both you and us while you use our service.</em></p>
+            <p>
+                <a href="support.html">Support</a> •
+                <a href="privacy.html">Privacy Policy</a> •
+                <a href="https://github.com/dan1sl6nd/BulkMess">GitHub</a> •
+                <a href="mailto:support@bulkmessapp.com">Contact</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const currentTheme = html.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.innerHTML = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme or default to light
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+
+            // Check for system preference if no saved theme
+            if (!savedTheme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDark) {
+                    html.setAttribute('data-theme', 'dark');
+                    themeToggle.innerHTML = '☀️ Light';
+                    localStorage.setItem('theme', 'dark');
+                }
+            } else if (savedTheme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+            }
+        }
+
+        // Load theme when page loads
+        document.addEventListener('DOMContentLoaded', loadTheme);
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                const html = document.documentElement;
+                const themeToggle = document.getElementById('themeToggle');
+
+                if (e.matches) {
+                    html.setAttribute('data-theme', 'dark');
+                    themeToggle.innerHTML = '☀️ Light';
+                } else {
+                    html.removeAttribute('data-theme');
+                    themeToggle.innerHTML = '🌙 Dark';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

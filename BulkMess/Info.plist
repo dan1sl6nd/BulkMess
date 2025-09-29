@@ -22,9 +22,9 @@
 		</dict>
 	</array>
 	<key>PRIVACY_URL</key>
-	<string>https://www.apple.com/legal/privacy/</string>
+	<string>https://dan1sl6nd.github.io/BulkMess/privacy.html</string>
 	<key>TERMS_URL</key>
-	<string>https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
+	<string>https://dan1sl6nd.github.io/BulkMess/terms.html</string>
     <key>UISupportedInterfaceOrientations</key>
     <array>
         <string>UIInterfaceOrientationPortrait</string>
