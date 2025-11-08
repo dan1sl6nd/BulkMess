@@ -8,6 +8,7 @@
 import SwiftUI
 import UserNotifications
 import CoreData
+import FacebookCore
 
 @main
 struct BulkMessApp: App {
@@ -21,10 +22,18 @@ struct BulkMessApp: App {
     @StateObject private var messageMonitoringService: MessageMonitoringService
     @StateObject private var automatedMessagingService: AutomatedMessagingService
     @StateObject private var notificationHandler: NotificationCenterHandler
-    @StateObject private var errorHandler = ErrorHandler()
+    @StateObject private var errorHandler: ErrorHandler
     @StateObject private var purchaseService = PurchaseService.shared
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    @AppStorage("hasRequestedATTPermission") private var hasRequestedATTPermission = false
 
     init() {
+        // Initialize Facebook SDK
+        ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            didFinishLaunchingWithOptions: nil
+        )
+
         // Create instances once and use them consistently
         let contactManager = ContactManager()
         let templateManager = MessageTemplateManager()
@@ -34,6 +43,7 @@ struct BulkMessApp: App {
         let messageMonitoringService = MessageMonitoringService()
         let automatedMessagingService = AutomatedMessagingService()
         let notificationHandler = NotificationCenterHandler(persistenceController: persistenceController)
+        let errorHandler = ErrorHandler()
 
         // Initialize StateObjects with the same instances
         self._contactManager = StateObject(wrappedValue: contactManager)
@@ -44,13 +54,24 @@ struct BulkMessApp: App {
         self._messageMonitoringService = StateObject(wrappedValue: messageMonitoringService)
         self._automatedMessagingService = StateObject(wrappedValue: automatedMessagingService)
         self._notificationHandler = StateObject(wrappedValue: notificationHandler)
+        self._errorHandler = StateObject(wrappedValue: errorHandler)
 
         // Set up notifications delegate
         UNUserNotificationCenter.current().delegate = notificationHandler
 
         // Register services in container for dependency injection
-        ServiceContainer.shared.registerDefaultServices(persistenceController: persistenceController)
-        ServiceContainer.shared.register(MessageMonitoringService.self, service: messageMonitoringService)
+        ServiceContainer.shared.registerDefaultServices(
+            persistenceController: persistenceController,
+            contactManager: contactManager,
+            templateManager: templateManager,
+            messagingService: messagingService,
+            messageMonitoringService: messageMonitoringService
+        )
+        ServiceContainer.shared.register(CampaignManager.self, service: campaignManager)
+        ServiceContainer.shared.register(DeliverySettings.self, service: deliverySettings)
+        ServiceContainer.shared.register(AutomatedMessagingService.self, service: automatedMessagingService)
+        ServiceContainer.shared.register(NotificationCenterHandler.self, service: notificationHandler)
+        ServiceContainer.shared.register(ErrorHandler.self, service: errorHandler)
     }
 
     var body: some Scene {
@@ -68,13 +89,35 @@ struct BulkMessApp: App {
                         .environmentObject(automatedMessagingService)
                         .environmentObject(errorHandler)
                         .handleErrors(with: errorHandler)
+                } else if hasCompletedOnboarding {
+                    AdaptivePaywallView()
                 } else {
-                    PaywallView()
+                    OnboardingView()
                 }
             }
             .environmentObject(purchaseService)
             .onOpenURL { url in
                 handleIncomingURL(url)
+            }
+            .onAppear {
+                // Activate Facebook Analytics
+                FacebookAnalyticsService.shared.activateApp()
+            }
+            .onChange(of: purchaseService.isPurchased) { isPurchased in
+                // Request ATT permission after successful purchase (only once)
+                // This is the best time because user has shown value by subscribing
+                if isPurchased && !hasRequestedATTPermission {
+                    if #available(iOS 14, *) {
+                        // Delay to let paywall close and main view settle
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            FacebookAnalyticsService.shared.requestTrackingPermission { granted in
+                                print("📊 Facebook: ATT permission \(granted ? "granted" : "denied") by user")
+                            }
+                            // Mark as requested so we don't ask again
+                            hasRequestedATTPermission = true
+                        }
+                    }
+                }
             }
         }
     }
@@ -194,6 +237,13 @@ struct BulkMessApp: App {
                 campaign.status = "completed"
                 print("✅ Updated campaign properties")
 
+                // Track Facebook campaign completion
+                let successRate = totalMessages > 0 ? Double(campaign.sentCount) / Double(totalMessages) : 0
+                FacebookAnalyticsService.shared.trackCampaignCompleted(
+                    recipientCount: Int(totalMessages),
+                    successRate: successRate
+                )
+
                 print("🔄 Saving Core Data context...")
                 // Save changes
                 try context.save()
@@ -206,6 +256,18 @@ struct BulkMessApp: App {
             }
         }
     }
+}
 
+// MARK: - Adaptive Paywall
 
+struct AdaptivePaywallView: View {
+    @StateObject private var onboardingAnswers = OnboardingAnswers.shared
+
+    var body: some View {
+        if onboardingAnswers.hasAnswers {
+            PersonalizedPaywallView(answers: onboardingAnswers.answers)
+        } else {
+            PaywallView()
+        }
+    }
 }
