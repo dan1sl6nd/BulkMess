@@ -774,6 +774,17 @@ struct PersonalizedPaywallView: View {
             // Track Facebook onboarding completion (only once)
             if !hasCompletedOnboarding {
                 FacebookAnalyticsService.shared.trackOnboardingCompleted()
+
+                // Request App Tracking Transparency permission after onboarding
+                // This is a good time because user has shown interest in the app
+                if #available(iOS 14, *) {
+                    // Small delay to let the view settle before showing ATT prompt
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        FacebookAnalyticsService.shared.requestTrackingPermission { granted in
+                            print("📊 Facebook: ATT permission \(granted ? "granted" : "denied") by user")
+                        }
+                    }
+                }
             }
             // Mark onboarding as completed now that they've seen the personalized paywall
             DispatchQueue.main.async {
