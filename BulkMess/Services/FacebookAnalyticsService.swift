@@ -32,13 +32,42 @@ class FacebookAnalyticsService {
     /// Note: SDK v17+ automatically reads ATTrackingManager status
     @available(iOS 14, *)
     func requestTrackingPermission(completion: ((Bool) -> Void)? = nil) {
+        // Log current status before requesting
+        let currentStatus = ATTrackingManager.trackingAuthorizationStatus
+        let statusString = attStatusToString(currentStatus)
+        print("📊 Facebook: Current ATT status before request: \(statusString)")
+
         ATTrackingManager.requestTrackingAuthorization { status in
             let isAuthorized = status == .authorized
+            let newStatusString = self.attStatusToString(status)
 
             DispatchQueue.main.async {
+                print("📊 Facebook: ATT status after request: \(newStatusString)")
                 print("📊 Facebook: Tracking permission - \(isAuthorized ? "Granted" : "Denied")")
+
+                if status == currentStatus && status != .authorized {
+                    print("⚠️ Facebook: ATT status unchanged - popup may not have shown")
+                    print("   Check: Settings → Privacy & Security → Tracking → Allow Apps to Request to Track")
+                }
+
                 completion?(isAuthorized)
             }
+        }
+    }
+
+    @available(iOS 14, *)
+    private func attStatusToString(_ status: ATTrackingManager.AuthorizationStatus) -> String {
+        switch status {
+        case .notDetermined:
+            return "notDetermined (user hasn't been asked yet)"
+        case .restricted:
+            return "restricted (system-wide tracking disabled or parental controls)"
+        case .denied:
+            return "denied (user denied or system setting is OFF)"
+        case .authorized:
+            return "authorized (user granted permission)"
+        @unknown default:
+            return "unknown"
         }
     }
 
