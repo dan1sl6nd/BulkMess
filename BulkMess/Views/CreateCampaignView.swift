@@ -1,20 +1,43 @@
 import SwiftUI
+import Foundation
 
 struct CreateCampaignView: View {
+    private let duplicationSourceName: String?
+
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var campaignManager: CampaignManager
     @EnvironmentObject var templateManager: MessageTemplateManager
     @EnvironmentObject var contactManager: ContactManager
 
-    @State private var campaignName = ""
+    @State private var campaignName: String
     @State private var selectedTemplate: MessageTemplate?
     @State private var previewTemplate: MessageTemplate?
-    @State private var selectedGroups: Set<ContactGroup> = []
-    @State private var scheduleDate: Date = Date()
-    @State private var isScheduled = false
+    @State private var selectedGroups: Set<ContactGroup>
+    @State private var scheduleDate: Date
+    @State private var isScheduled: Bool
 
     @State private var showingGroupSelection = false
     @State private var showingAddTemplate = false
+
+    init(prefillCampaign: Campaign? = nil) {
+        if let trimmedName = prefillCampaign?.name?.trimmingCharacters(in: .whitespacesAndNewlines), !trimmedName.isEmpty {
+            self.duplicationSourceName = trimmedName
+        } else {
+            self.duplicationSourceName = nil
+        }
+
+        let duplicateName = CreateCampaignView.duplicateName(from: prefillCampaign)
+        let initialTemplate = prefillCampaign?.template
+        let initialGroups = CreateCampaignView.initialGroups(from: prefillCampaign)
+        let scheduledDate = prefillCampaign?.scheduledDate
+
+        _campaignName = State(initialValue: duplicateName)
+        _selectedTemplate = State(initialValue: initialTemplate)
+        _previewTemplate = State(initialValue: nil)
+        _selectedGroups = State(initialValue: initialGroups)
+        _scheduleDate = State(initialValue: scheduledDate ?? Date())
+        _isScheduled = State(initialValue: scheduledDate != nil)
+    }
 
     var recipientCount: Int {
         let allContacts = Set(selectedGroups.flatMap { $0.contactsArray })
@@ -25,6 +48,18 @@ struct CreateCampaignView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: AppTheme.Spacing.xl) {
+                    if let duplicationSourceName {
+                        SectionCard(
+                            title: "Duplicating Campaign",
+                            subtitle: "Based on “\(duplicationSourceName)”"
+                        ) {
+                            Text("We pre-filled the details from your previous campaign. Review them, adjust if needed, and send when ready.")
+                                .font(AppTheme.Typography.callout)
+                                .foregroundColor(AppTheme.secondaryText)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
+
                     // Campaign Details Card
                     SectionCard(title: "Campaign Details", subtitle: "Give your campaign a memorable name") {
                         ModernTextField(
@@ -193,6 +228,37 @@ struct CreateCampaignView: View {
 
         dismiss()
     }
+
+    private static func duplicateName(from campaign: Campaign?) -> String {
+        guard let rawName = campaign?.name?.trimmingCharacters(in: .whitespacesAndNewlines), !rawName.isEmpty else {
+            return ""
+        }
+
+        let pattern = #"^(.*?)(?:\s\((?:Copy)(?:\s(\d+))?\))?$"#
+        if let regex = try? NSRegularExpression(pattern: pattern, options: []),
+           let match = regex.firstMatch(in: rawName, options: [], range: NSRange(location: 0, length: rawName.utf16.count)),
+           let baseRange = Range(match.range(at: 1), in: rawName) {
+            let baseName = String(rawName[baseRange])
+            let numberRange = Range(match.range(at: 2), in: rawName)
+            let hasCopySuffix = rawName.contains(" (Copy")
+            if hasCopySuffix {
+                let currentNumber = numberRange.flatMap { Int(rawName[$0]) } ?? 1
+                let nextNumber = currentNumber + 1
+                return "\(baseName) (Copy \(nextNumber))"
+            } else {
+                return baseName + " (Copy)"
+            }
+        }
+
+        return rawName + " (Copy)"
+    }
+
+    private static func initialGroups(from campaign: Campaign?) -> Set<ContactGroup> {
+        guard let groups = campaign?.targetGroupsArray else {
+            return []
+        }
+        return Set(groups)
+    }
 }
 
 // MARK: - Modern Form Components
@@ -216,14 +282,17 @@ struct ModernTextField: View {
 
             TextField(placeholder, text: $text)
                 .textInputAutocapitalization(.words)
+                .autocorrectionDisabled()
+                .submitLabel(.done)
+                .transaction { transaction in
+                    transaction.animation = nil
+                }
                 .padding(AppTheme.Spacing.md)
-                .background(
+                .background(AppTheme.accent.opacity(0.05))
+                .cornerRadius(AppTheme.Radius.card)
+                .overlay(
                     RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                        .fill(AppTheme.accent.opacity(0.05))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                .stroke(AppTheme.accent.opacity(0.2), lineWidth: 1)
-                        )
+                        .stroke(AppTheme.accent.opacity(0.2), lineWidth: 1)
                 )
         }
     }

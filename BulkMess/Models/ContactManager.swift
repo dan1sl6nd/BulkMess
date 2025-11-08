@@ -6,15 +6,22 @@ class ContactManager: ObservableObject {
     @Published var contacts: [Contact] = []
     @Published var contactGroups: [ContactGroup] = []
     @Published var permissionStatus: CNAuthorizationStatus = .notDetermined
+    @Published var isSyncing: Bool = false
 
     private let contactStore = CNContactStore()
     private let persistenceController: PersistenceController
+    private let lastSyncKey = "lastContactSyncDate"
 
     init(persistenceController: PersistenceController = .shared) {
         self.persistenceController = persistenceController
         checkContactsPermission()
         loadContacts()
         loadContactGroups()
+
+        // Automatically sync contacts if permissions are granted
+        Task {
+            await autoSyncContactsIfNeeded()
+        }
     }
 
     // MARK: - Permission Management
@@ -29,12 +36,63 @@ class ContactManager: ObservableObject {
             await MainActor.run {
                 self.permissionStatus = granted ? .authorized : .denied
             }
+
+            // Auto-sync contacts when permission is granted
+            if granted {
+                Task {
+                    await autoSyncContactsIfNeeded()
+                }
+            }
+
             return granted
         } catch {
             await MainActor.run {
                 self.permissionStatus = .denied
             }
             return false
+        }
+    }
+
+    // MARK: - Auto Sync
+
+    private func autoSyncContactsIfNeeded() async {
+        // Check if we have permission
+        guard permissionStatus == .authorized || permissionStatus == .limited else {
+            return
+        }
+
+        // Check if we need to sync (sync every 24 hours or if never synced)
+        let lastSync = UserDefaults.standard.object(forKey: lastSyncKey) as? Date
+        let shouldSync: Bool
+
+        if let lastSync = lastSync {
+            // Sync if more than 24 hours have passed
+            shouldSync = Date().timeIntervalSince(lastSync) > 24 * 60 * 60
+        } else {
+            // Never synced before
+            shouldSync = true
+        }
+
+        if shouldSync {
+            await syncContacts()
+        }
+    }
+
+    func syncContacts() async {
+        await MainActor.run {
+            isSyncing = true
+        }
+
+        do {
+            try await importDeviceContacts()
+            UserDefaults.standard.set(Date(), forKey: lastSyncKey)
+            print("✅ Contacts synced successfully")
+        } catch {
+            print("❌ Error syncing contacts: \(error)")
+        }
+
+        await MainActor.run {
+            isSyncing = false
         }
     }
 

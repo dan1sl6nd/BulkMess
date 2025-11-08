@@ -1,10 +1,41 @@
 import SwiftUI
 import Contacts
 
+private enum AppInfo {
+    static var marketingVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
+    }
+
+    static var buildNumber: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1"
+    }
+
+    static var formatted: String {
+        "Version \(marketingVersion) (\(buildNumber))"
+    }
+}
+
 struct SettingsView: View {
     @EnvironmentObject var contactManager: ContactManager
     @State private var showingPermissionsAlert = false
     @State private var showingAbout = false
+
+    private func timeAgoString(from date: Date) -> String {
+        let interval = Date().timeIntervalSince(date)
+        let hours = Int(interval / 3600)
+        let minutes = Int((interval.truncatingRemainder(dividingBy: 3600)) / 60)
+
+        if hours > 24 {
+            let days = hours / 24
+            return "\(days) day\(days == 1 ? "" : "s") ago"
+        } else if hours > 0 {
+            return "\(hours) hour\(hours == 1 ? "" : "s") ago"
+        } else if minutes > 0 {
+            return "\(minutes) minute\(minutes == 1 ? "" : "s") ago"
+        } else {
+            return "just now"
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -17,7 +48,7 @@ struct SettingsView: View {
                                 IconBadge("megaphone.fill", color: AppTheme.accent, size: 60)
 
                                 VStack(alignment: .leading, spacing: AppTheme.Spacing.xs) {
-                                    Text("Version 1.0.0")
+                                    Text(AppInfo.formatted)
                                         .font(AppTheme.Typography.headline)
                                         .foregroundColor(.primary)
 
@@ -73,25 +104,83 @@ struct SettingsView: View {
                             }
                             .settingsCard()
 
-                            // Sync Button
-                            Button {
-                                Task {
-                                    if contactManager.permissionStatus == .authorized || contactManager.permissionStatus == .limited {
-                                        try? await contactManager.importDeviceContacts()
-                                    } else {
-                                        showingPermissionsAlert = true
+                            // Sync Status and Button
+                            VStack(spacing: AppTheme.Spacing.sm) {
+                                // Last sync info
+                                if let lastSync = UserDefaults.standard.object(forKey: "lastContactSyncDate") as? Date {
+                                    HStack {
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundColor(AppTheme.success)
+                                            .font(.system(size: 14))
+
+                                        Text("Last synced: \(timeAgoString(from: lastSync))")
+                                            .font(AppTheme.Typography.caption)
+                                            .foregroundColor(AppTheme.secondaryText)
+
+                                        Spacer()
                                     }
+                                    .padding(.horizontal, AppTheme.Spacing.sm)
+                                }
+
+                                // Sync Button
+                                Button {
+                                    Task {
+                                        if contactManager.permissionStatus == .authorized || contactManager.permissionStatus == .limited {
+                                            await contactManager.syncContacts()
+                                        } else {
+                                            showingPermissionsAlert = true
+                                        }
+                                    }
+                                } label: {
+                                    HStack(spacing: AppTheme.Spacing.sm) {
+                                        if contactManager.isSyncing {
+                                            ProgressView()
+                                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                                .scaleEffect(0.8)
+                                        } else {
+                                            Image(systemName: "arrow.2.circlepath")
+                                        }
+                                        Text(contactManager.isSyncing ? "Syncing..." : "Sync Now")
+                                            .fontWeight(.medium)
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                }
+                                .buttonStyle(PrimaryButtonStyle())
+                                .disabled(contactManager.permissionStatus != .authorized && contactManager.permissionStatus != .limited || contactManager.isSyncing)
+                            }
+                        }
+                    }
+
+                    // Automation & Integration
+                    SectionCard(title: "Automation", subtitle: "Shortcuts and integrations") {
+                        VStack(spacing: AppTheme.Spacing.md) {
+                            Button {
+                                if let url = URL(string: "https://www.icloud.com/shortcuts/5f30c7cc985a4b5eb1bf6fcf06b01f01") {
+                                    UIApplication.shared.open(url)
                                 }
                             } label: {
-                                HStack(spacing: AppTheme.Spacing.sm) {
-                                    Image(systemName: "arrow.2.circlepath")
-                                    Text("Sync Device Contacts")
-                                        .fontWeight(.medium)
+                                HStack(spacing: AppTheme.Spacing.lg) {
+                                    IconBadge("command.square.fill", color: AppTheme.accentSecondary, size: 44)
+
+                                    VStack(alignment: .leading, spacing: AppTheme.Spacing.xs) {
+                                        Text("BulkMess Shortcut")
+                                            .font(AppTheme.Typography.headline)
+                                            .foregroundColor(.primary)
+
+                                        Text("Download iOS Shortcut for automation")
+                                            .font(AppTheme.Typography.caption)
+                                            .foregroundColor(AppTheme.secondaryText)
+                                    }
+
+                                    Spacer()
+
+                                    Image(systemName: "arrow.down.circle.fill")
+                                        .font(.system(size: 24))
+                                        .foregroundColor(AppTheme.accent)
                                 }
-                                .frame(maxWidth: .infinity)
                             }
-                            .buttonStyle(PrimaryButtonStyle())
-                            .disabled(contactManager.permissionStatus != .authorized && contactManager.permissionStatus != .limited)
+                            .buttonStyle(.plain)
+                            .settingsCard()
                         }
                     }
 
@@ -265,7 +354,7 @@ struct ModernAboutView: View {
                                 .font(AppTheme.Typography.largeTitle)
                                 .foregroundColor(.primary)
 
-                            Text("Version 1.0.0")
+                            Text(AppInfo.formatted)
                                 .font(AppTheme.Typography.headline)
                                 .foregroundColor(AppTheme.secondaryText)
                         }

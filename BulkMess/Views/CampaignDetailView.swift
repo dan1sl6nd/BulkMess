@@ -12,6 +12,7 @@ struct CampaignDetailView: View {
     @State private var showingDeleteAlert = false
     @State private var showingSendAlert = false
     @State private var toastMessage: String? = nil
+    @State private var showingDuplicateSheet = false
 
     var analytics: CampaignAnalytics {
         campaignManager.getCampaignAnalytics(campaign)
@@ -45,6 +46,15 @@ struct CampaignDetailView: View {
                         }
                     } onSendViaShortcuts: {
                         sendViaShortcuts()
+                    } onDuplicate: {
+                        AnalyticsService.shared.track(
+                            "campaign_duplicate_started",
+                            properties: [
+                                "campaign_id": campaign.objectID.uriRepresentation().absoluteString,
+                                "status": campaign.status ?? "unknown"
+                            ]
+                        )
+                        showingDuplicateSheet = true
                     }
                 }
                 .padding()
@@ -103,6 +113,9 @@ struct CampaignDetailView: View {
                 }
             } message: {
                 Text("This will send the campaign to \(analytics.totalRecipients) recipients. This action cannot be undone.")
+            }
+            .sheet(isPresented: $showingDuplicateSheet) {
+                CreateCampaignView(prefillCampaign: campaign)
             }
         }
     }
@@ -421,93 +434,125 @@ struct CampaignActionsSection: View {
     let campaign: Campaign
     let onSend: () -> Void
     let onSendViaShortcuts: () -> Void
+    let onDuplicate: () -> Void
 
     var body: some View {
         VStack(spacing: 12) {
             if campaign.status == "draft" {
-                // Primary Manual Sending
-                Button {
-                    onSend()
-                } label: {
-                    HStack {
-                        Image(systemName: "paperplane.fill")
-                        Text("Send Campaign")
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(12)
-                }
-
-                // Shortcuts Support Section
-                VStack(spacing: 8) {
+                VStack(spacing: 16) {
+                    // Primary Manual Sending (interactive)
                     Button {
-                        onSendViaShortcuts()
+                        onSend()
                     } label: {
-                        HStack {
-                            Image(systemName: "square.and.arrow.up.on.square")
-                            Text("Send via Shortcuts")
+                        VStack(spacing: 6) {
+                            HStack {
+                                Image(systemName: "hand.tap.fill")
+                                Text("Send Manually (one by one)")
+                            }
+                            .font(.headline)
+
+                            Text("Opens Messages composer for each recipient so you can review and tap Send.")
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white.opacity(0.85))
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.orange)
+                        .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(12)
                     }
 
-                    // Shortcut Download Link
-                    Button {
-                        if let url = URL(string: "https://www.icloud.com/shortcuts/5f30c7cc985a4b5eb1bf6fcf06b01f01") {
-                            UIApplication.shared.open(url)
+                    // Shortcuts Support Section
+                    VStack(spacing: 12) {
+                        Button {
+                            onSendViaShortcuts()
+                        } label: {
+                            VStack(spacing: 6) {
+                                HStack {
+                                    Image(systemName: "bolt.fill")
+                                    Text("Send Automatically via Shortcut")
+                                }
+                                .font(.headline)
+
+                                Text("Copies the campaign to clipboard and runs your BulkMess Shortcut to send in the background.")
+                                    .font(.subheadline)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white.opacity(0.85))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.orange)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
                         }
-                    } label: {
-                        HStack {
-                            Image(systemName: "square.and.arrow.down")
-                            Text("Get BulkMess Shortcut")
+
+                        // Shortcut Download Link
+                        Button {
+                            if let url = URL(string: "https://www.icloud.com/shortcuts/5f30c7cc985a4b5eb1bf6fcf06b01f01") {
+                                UIApplication.shared.open(url)
+                            }
+                        } label: {
+                            HStack {
+                                Image(systemName: "square.and.arrow.down")
+                                Text("Get BulkMess Shortcut")
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.gray.opacity(0.2))
+                            .foregroundColor(.primary)
+                            .cornerRadius(12)
                         }
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.gray.opacity(0.2))
-                        .foregroundColor(.primary)
-                        .cornerRadius(12)
                     }
                 }
             } else if campaign.status == "sending" {
-                HStack {
-                    Image(systemName: "clock")
-                        .foregroundColor(.blue)
-                    Text("Campaign is currently sending...")
-                        .foregroundColor(.blue)
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(12)
+                statusBanner(icon: "clock", text: "Campaign is currently sending...", tint: .blue)
             } else if campaign.status == "completed" {
-                HStack {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                    Text("Campaign completed successfully")
-                        .foregroundColor(.green)
+                VStack(spacing: 12) {
+                    statusBanner(icon: "checkmark.circle.fill", text: "Campaign completed successfully", tint: .green)
+                    duplicateButton()
                 }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.green.opacity(0.1))
-                .cornerRadius(12)
             } else if campaign.status == "completed_with_errors" {
-                HStack {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .foregroundColor(.orange)
-                    Text("Campaign completed with errors")
-                        .foregroundColor(.orange)
+                VStack(spacing: 12) {
+                    statusBanner(icon: "exclamationmark.triangle.fill", text: "Campaign completed with errors", tint: .orange)
+                    duplicateButton()
                 }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.orange.opacity(0.1))
-                .cornerRadius(12)
+            } else if campaign.status == "failed" {
+                VStack(spacing: 12) {
+                    statusBanner(icon: "xmark.octagon.fill", text: "Campaign failed. Review details and try again.", tint: .red)
+                    duplicateButton()
+                }
             }
         }
+    }
+
+    @ViewBuilder
+    private func statusBanner(icon: String, text: String, tint: Color) -> some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(tint)
+            Text(text)
+                .foregroundColor(tint)
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(tint.opacity(0.1))
+        .cornerRadius(12)
+    }
+
+    @ViewBuilder
+    private func duplicateButton() -> some View {
+        Button {
+            onDuplicate()
+        } label: {
+            HStack(spacing: AppTheme.Spacing.sm) {
+                Image(systemName: "doc.on.doc.fill")
+                Text("Duplicate Campaign")
+                    .fontWeight(.semibold)
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(SecondaryButtonStyle())
     }
 }
 

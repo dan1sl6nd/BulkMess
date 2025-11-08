@@ -66,32 +66,12 @@ struct CampaignsView: View {
             .navigationTitle("Campaigns")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu {
-                        Button {
-                            showingCreateCampaign = true
-                        } label: {
-                            Label("New Campaign", systemImage: "plus.circle")
-                        }
-                        .disabled(!canCreateCampaign)
-
-                        Divider()
-
-                        Button {
-                            if let url = URL(string: "https://www.icloud.com/shortcuts/5f30c7cc985a4b5eb1bf6fcf06b01f01") {
-                                UIApplication.shared.open(url)
-                            }
-                        } label: {
-                            Label("Get BulkMess Shortcut", systemImage: "square.and.arrow.down")
-                        }
-
-                        if !canCreateCampaign {
-                            Divider()
-                            Text("Add contacts first")
-                                .foregroundColor(.secondary)
-                        }
+                    Button {
+                        showingCreateCampaign = true
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .disabled(!canCreateCampaign)
                 }
             }
             .sheet(isPresented: $showingCreateCampaign) {

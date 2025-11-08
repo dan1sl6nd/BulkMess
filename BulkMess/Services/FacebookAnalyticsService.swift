@@ -32,6 +32,21 @@ class FacebookAnalyticsService {
     /// Note: SDK v17+ automatically reads ATTrackingManager status
     @available(iOS 14, *)
     func requestTrackingPermission(completion: ((Bool) -> Void)? = nil) {
+        // Log environment info
+        #if targetEnvironment(simulator)
+        print("⚠️ Facebook: Running on SIMULATOR - ATT prompts may not work properly")
+        print("   For proper ATT testing, use a REAL DEVICE with iOS 14.5+")
+        #else
+        print("✅ Facebook: Running on REAL DEVICE")
+        #endif
+
+        let osVersion = ProcessInfo.processInfo.operatingSystemVersion
+        print("📱 Facebook: iOS Version: \(osVersion.majorVersion).\(osVersion.minorVersion).\(osVersion.patchVersion)")
+
+        if osVersion.majorVersion < 14 || (osVersion.majorVersion == 14 && osVersion.minorVersion < 5) {
+            print("⚠️ Facebook: ATT requires iOS 14.5+, you have iOS \(osVersion.majorVersion).\(osVersion.minorVersion)")
+        }
+
         // Log current status before requesting
         let currentStatus = ATTrackingManager.trackingAuthorizationStatus
         let statusString = attStatusToString(currentStatus)

@@ -190,20 +190,19 @@ struct CursorAwareModernTextEditor: View {
                         text: $text,
                         placeholder: placeholder,
                         onCursorPositionChange: { position in
-                            DispatchQueue.main.async {
-                                cursorPosition = position
-                            }
+                            cursorPosition = position
                         }
                     )
+                    .transaction { transaction in
+                        transaction.animation = nil
+                    }
                     .frame(minHeight: 120)
                 }
-                .background(
+                .background(AppTheme.accent.opacity(0.05))
+                .cornerRadius(AppTheme.Radius.card)
+                .overlay(
                     RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                        .fill(AppTheme.accent.opacity(0.05))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                .stroke(AppTheme.accent.opacity(0.2), lineWidth: 1)
-                        )
+                        .stroke(AppTheme.accent.opacity(0.2), lineWidth: 1)
                 )
 
                 HStack {

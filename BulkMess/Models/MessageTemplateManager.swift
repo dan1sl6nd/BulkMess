@@ -5,6 +5,21 @@ class MessageTemplateManager: ObservableObject {
     @Published var templates: [MessageTemplate] = []
 
     private let persistenceController: PersistenceController
+    private static let formatterQueue = DispatchQueue(label: "com.bulkmess.MessageTemplateManager.formatters")
+    private static let cachedDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.locale = .autoupdatingCurrent
+        formatter.calendar = .autoupdatingCurrent
+        return formatter
+    }()
+    private static let cachedTimeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.locale = .autoupdatingCurrent
+        formatter.calendar = .autoupdatingCurrent
+        return formatter
+    }()
 
     init(persistenceController: PersistenceController = .shared) {
         self.persistenceController = persistenceController
@@ -84,74 +99,41 @@ class MessageTemplateManager: ObservableObject {
         let templateContent: String = template.content ?? ""
         var processedContent: String = templateContent
 
-        // Replace new simplified placeholders
-        processedContent = processedContent.replacingOccurrences(
-            of: "{name}",
-            with: contact.firstName ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{last}",
-            with: contact.lastName ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{full}",
-            with: getFullName(for: contact)
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{phone}",
-            with: contact.phoneNumber ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{email}",
-            with: contact.email ?? ""
-        )
+        let firstName = contact.firstName ?? ""
+        let lastName = contact.lastName ?? ""
+        let fullName = getFullName(for: contact)
+        let phone = contact.phoneNumber ?? ""
+        let email = contact.email ?? ""
 
-        // Replace legacy placeholders for backward compatibility
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{firstName}}",
-            with: contact.firstName ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{lastName}}",
-            with: contact.lastName ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{fullName}}",
-            with: getFullName(for: contact)
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{phoneNumber}}",
-            with: contact.phoneNumber ?? ""
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{email}}",
-            with: contact.email ?? ""
-        )
+        let now = Date()
+        let (dateString, timeString) = Self.formatterQueue.sync {
+            (
+                Self.cachedDateFormatter.string(from: now),
+                Self.cachedTimeFormatter.string(from: now)
+            )
+        }
 
-        // Add date/time placeholders (new format)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        processedContent = processedContent.replacingOccurrences(
-            of: "{date}",
-            with: dateFormatter.string(from: Date())
-        )
+        let replacements: [(placeholder: String, value: String)] = [
+            ("{name}", firstName),
+            ("{last}", lastName),
+            ("{full}", fullName),
+            ("{phone}", phone),
+            ("{email}", email),
+            ("{{firstName}}", firstName),
+            ("{{lastName}}", lastName),
+            ("{{fullName}}", fullName),
+            ("{{phoneNumber}}", phone),
+            ("{{email}}", email),
+            ("{date}", dateString),
+            ("{time}", timeString),
+            ("{{currentDate}}", dateString),
+            ("{{currentTime}}", timeString)
+        ]
 
-        let timeFormatter = DateFormatter()
-        timeFormatter.timeStyle = .short
-        processedContent = processedContent.replacingOccurrences(
-            of: "{time}",
-            with: timeFormatter.string(from: Date())
-        )
-
-        // Legacy date/time placeholders
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{currentDate}}",
-            with: dateFormatter.string(from: Date())
-        )
-        processedContent = processedContent.replacingOccurrences(
-            of: "{{currentTime}}",
-            with: timeFormatter.string(from: Date())
-        )
+        for (placeholder, value) in replacements {
+            guard processedContent.contains(placeholder) else { continue }
+            processedContent = processedContent.replacingOccurrences(of: placeholder, with: value)
+        }
 
         return processedContent
     }

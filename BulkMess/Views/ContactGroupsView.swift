@@ -23,11 +23,9 @@ struct ContactGroupsView: View {
                         }
                         .padding(.horizontal, AppTheme.Spacing.lg)
                         .padding(.top, AppTheme.Spacing.sm)
+                        .padding(.bottom, AppTheme.Spacing.lg)
                     }
                     .background(AppTheme.background)
-                    .refreshable {
-                        contactManager.reloadContactGroups()
-                    }
                 }
             }
             .navigationTitle("Contact Groups")
@@ -162,21 +160,12 @@ struct ContactGroupRowView: View {
 
 struct ContactGroupsEmptyStateView: View {
     @Binding var showingAddGroup: Bool
-    @State private var animateIcon = false
 
     var body: some View {
         VStack(spacing: AppTheme.Spacing.xxl) {
             VStack(spacing: AppTheme.Spacing.xl) {
-                // Animated hero icon
+                // Hero icon
                 IconBadge("folder.badge.gearshape", color: AppTheme.accent, size: 100)
-                    .scaleEffect(animateIcon ? 1.1 : 1.0)
-                    .animation(
-                        Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true),
-                        value: animateIcon
-                    )
-                    .onAppear {
-                        animateIcon = true
-                    }
 
                 VStack(spacing: AppTheme.Spacing.md) {
                     Text("No Contact Groups")

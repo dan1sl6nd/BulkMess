@@ -42,6 +42,13 @@ class CampaignManager: ObservableObject {
         do {
             try context.save()
             loadCampaigns()
+
+            // Track Facebook campaign creation
+            FacebookAnalyticsService.shared.trackCampaignCreated(
+                recipientCount: Int(campaign.totalRecipients),
+                hasTemplate: template != nil
+            )
+
             return campaign
         } catch {
             print("Error creating campaign: \(error)")

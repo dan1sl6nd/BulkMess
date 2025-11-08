@@ -8,7 +8,6 @@ struct ContactsView: View {
     @State private var searchText = ""
     @State private var showingAddContact = false
     @State private var showingGroups = false
-    @State private var isImporting = false
     @State private var selectedContact: Contact?
 
     var filteredContacts: [Contact] {
@@ -39,7 +38,6 @@ struct ContactsView: View {
                     .scrollContentBackground(.hidden)
                     .background(AppTheme.background)
                     .searchable(text: $searchText, prompt: "Search...")
-                    .refreshable { await refreshContacts() }
                 }
             }
             .navigationTitle("Contacts")
@@ -62,30 +60,9 @@ struct ContactsView: View {
                     }
                 }
 
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Menu {
-                        Button {
-                            showingGroups = true
-                        } label: {
-                            Label("Manage Groups", systemImage: "folder.fill")
-                        }
-
-                        Divider()
-
-                        if contactManager.permissionStatus == .authorized {
-                            Button {
-                                Task { await refreshContacts() }
-                            } label: {
-                                Label("Sync Contacts", systemImage: isImporting ? "arrow.clockwise" : "arrow.2.circlepath")
-                            }
-                            .disabled(isImporting)
-                        }
-
-                        Button {
-                            showingAddContact = true
-                        } label: {
-                            Label("Add Contact", systemImage: "person.crop.circle.badge.plus")
-                        }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddContact = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -111,25 +88,6 @@ struct ContactsView: View {
     private func deleteContacts(offsets: IndexSet) {
         for index in offsets {
             contactManager.deleteContact(filteredContacts[index])
-        }
-    }
-
-    private func refreshContacts() async {
-        isImporting = true
-        defer {
-            Task { @MainActor in
-                isImporting = false
-            }
-        }
-
-        do {
-            try await contactManager.importDeviceContacts()
-        } catch {
-            if let contactError = error as? ContactError {
-                errorHandler.handle(contactError.asAppError)
-            } else {
-                errorHandler.handle(AppError.unknown(error.localizedDescription))
-            }
         }
     }
 }
@@ -287,7 +245,7 @@ struct ContactsPermissionView: View {
                     .padding(.horizontal)
             }
 
-            Button("Grant Access") {
+            Button("Continue") {
                 Task {
                     await contactManager.requestContactsPermission()
                 }
@@ -330,10 +288,6 @@ struct ContactsEmptyStateView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
-
-                Text("or pull down to sync your device contacts")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
             }
         }
         .padding(.horizontal, AppTheme.Spacing.xxl)
