@@ -8,6 +8,7 @@
 import Foundation
 import FacebookCore
 import AppTrackingTransparency
+import UIKit
 
 /// Service for tracking app events and conversions with Facebook Analytics
 class FacebookAnalyticsService {
@@ -51,6 +52,30 @@ class FacebookAnalyticsService {
         let currentStatus = ATTrackingManager.trackingAuthorizationStatus
         let statusString = attStatusToString(currentStatus)
         print("📊 Facebook: Current ATT status before request: \(statusString)")
+
+        // Verify we're on main thread
+        if !Thread.isMainThread {
+            print("⚠️ Facebook: ATT request called from background thread, dispatching to main")
+            DispatchQueue.main.async {
+                self.requestTrackingPermission(completion: completion)
+            }
+            return
+        }
+
+        // Check app state
+        let appState = UIApplication.shared.applicationState
+        print("📱 Facebook: App state: \(appState == .active ? "active" : appState == .inactive ? "inactive" : "background")")
+
+        if appState != .active {
+            print("⚠️ Facebook: App not in active state - ATT prompt may not show")
+            print("   Waiting for app to become active...")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.requestTrackingPermission(completion: completion)
+            }
+            return
+        }
+
+        print("✅ Facebook: Requesting ATT permission on main thread with app in active state")
 
         ATTrackingManager.requestTrackingAuthorization { status in
             let isAuthorized = status == .authorized
