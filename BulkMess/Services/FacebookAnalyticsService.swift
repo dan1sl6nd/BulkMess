@@ -21,10 +21,6 @@ class FacebookAnalyticsService {
     /// Call this when the app finishes launching
     func activateApp() {
         AppEvents.shared.activateApp()
-        print("📊 Facebook: App activated")
-
-        // Log tracking status (SDK v17+ handles this automatically)
-        logTrackingStatus()
     }
 
     // MARK: - iOS 14.5+ App Tracking Transparency
@@ -33,94 +29,29 @@ class FacebookAnalyticsService {
     /// Note: SDK v17+ automatically reads ATTrackingManager status
     @available(iOS 14, *)
     func requestTrackingPermission(completion: ((Bool) -> Void)? = nil) {
-        // Log environment info
-        #if targetEnvironment(simulator)
-        print("⚠️ Facebook: Running on SIMULATOR - ATT prompts may not work properly")
-        print("   For proper ATT testing, use a REAL DEVICE with iOS 14.5+")
-        #else
-        print("✅ Facebook: Running on REAL DEVICE")
-        #endif
-
-        let osVersion = ProcessInfo.processInfo.operatingSystemVersion
-        print("📱 Facebook: iOS Version: \(osVersion.majorVersion).\(osVersion.minorVersion).\(osVersion.patchVersion)")
-
-        if osVersion.majorVersion < 14 || (osVersion.majorVersion == 14 && osVersion.minorVersion < 5) {
-            print("⚠️ Facebook: ATT requires iOS 14.5+, you have iOS \(osVersion.majorVersion).\(osVersion.minorVersion)")
-        }
-
-        // Log current status before requesting
-        let currentStatus = ATTrackingManager.trackingAuthorizationStatus
-        let statusString = attStatusToString(currentStatus)
-        print("📊 Facebook: Current ATT status before request: \(statusString)")
-
         // Verify we're on main thread
         if !Thread.isMainThread {
-            print("⚠️ Facebook: ATT request called from background thread, dispatching to main")
             DispatchQueue.main.async {
                 self.requestTrackingPermission(completion: completion)
             }
             return
         }
 
-        // Check app state
+        // Check app state - ATT prompt only works when app is active
         let appState = UIApplication.shared.applicationState
-        print("📱 Facebook: App state: \(appState == .active ? "active" : appState == .inactive ? "inactive" : "background")")
-
         if appState != .active {
-            print("⚠️ Facebook: App not in active state - ATT prompt may not show")
-            print("   Waiting for app to become active...")
+            // Wait for app to become active before showing ATT prompt
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.requestTrackingPermission(completion: completion)
             }
             return
         }
 
-        print("✅ Facebook: Requesting ATT permission on main thread with app in active state")
-
         ATTrackingManager.requestTrackingAuthorization { status in
             let isAuthorized = status == .authorized
-            let newStatusString = self.attStatusToString(status)
-
             DispatchQueue.main.async {
-                print("📊 Facebook: ATT status after request: \(newStatusString)")
-                print("📊 Facebook: Tracking permission - \(isAuthorized ? "Granted" : "Denied")")
-
-                if status == currentStatus && status != .authorized {
-                    print("⚠️ Facebook: ATT status unchanged - popup may not have shown")
-                    print("   Check: Settings → Privacy & Security → Tracking → Allow Apps to Request to Track")
-                }
-
                 completion?(isAuthorized)
             }
-        }
-    }
-
-    @available(iOS 14, *)
-    private func attStatusToString(_ status: ATTrackingManager.AuthorizationStatus) -> String {
-        switch status {
-        case .notDetermined:
-            return "notDetermined (user hasn't been asked yet)"
-        case .restricted:
-            return "restricted (system-wide tracking disabled or parental controls)"
-        case .denied:
-            return "denied (user denied or system setting is OFF)"
-        case .authorized:
-            return "authorized (user granted permission)"
-        @unknown default:
-            return "unknown"
-        }
-    }
-
-    /// Log current tracking authorization status
-    /// SDK v17+ automatically uses ATTrackingManager.trackingAuthorizationStatus
-    private func logTrackingStatus() {
-        if #available(iOS 14, *) {
-            let status = ATTrackingManager.trackingAuthorizationStatus
-            let isEnabled = status == .authorized
-            print("📊 Facebook: Advertiser tracking enabled - \(isEnabled)")
-        } else {
-            // iOS 13 and below - tracking is always enabled
-            print("📊 Facebook: Advertiser tracking enabled - true")
         }
     }
 
@@ -129,7 +60,6 @@ class FacebookAnalyticsService {
     /// Track when user completes onboarding
     func trackOnboardingCompleted() {
         AppEvents.shared.logEvent(.init("OnboardingCompleted"))
-        print("📊 Facebook: Onboarding completed")
     }
 
     // MARK: - Subscription Events
@@ -146,7 +76,6 @@ class FacebookAnalyticsService {
             valueToSum: value,
             parameters: parameters
         )
-        print("📊 Facebook: Trial started - \(plan) ($\(String(format: "%.2f", value)))")
     }
 
     /// Track when user subscribes (converts from trial or direct purchase)
@@ -161,7 +90,6 @@ class FacebookAnalyticsService {
             currency: currency,
             parameters: parameters
         )
-        print("📊 Facebook: Purchase tracked - \(plan) ($\(String(format: "%.2f", amount)))")
     }
 
     /// Track when user cancels subscription
@@ -174,7 +102,6 @@ class FacebookAnalyticsService {
             .init("SubscriptionCancelled"),
             parameters: parameters
         )
-        print("📊 Facebook: Subscription cancelled - \(plan)")
     }
 
     // MARK: - Campaign Events
@@ -190,7 +117,6 @@ class FacebookAnalyticsService {
             .init("CampaignCreated"),
             parameters: parameters
         )
-        print("📊 Facebook: Campaign created - \(recipientCount) recipients")
     }
 
     /// Track when campaign is sent
@@ -204,7 +130,6 @@ class FacebookAnalyticsService {
             .init("CampaignSent"),
             parameters: parameters
         )
-        print("📊 Facebook: Campaign sent - \(messagesSent) messages")
     }
 
     /// Track when campaign completes
@@ -219,7 +144,6 @@ class FacebookAnalyticsService {
             valueToSum: Double(recipientCount),
             parameters: parameters
         )
-        print("📊 Facebook: Campaign completed - \(Int(successRate * 100))% success rate")
     }
 
     // MARK: - Template Events
@@ -234,7 +158,6 @@ class FacebookAnalyticsService {
             .init("TemplateCreated"),
             parameters: parameters
         )
-        print("📊 Facebook: Template created")
     }
 
     // MARK: - Contact Events
@@ -251,7 +174,6 @@ class FacebookAnalyticsService {
             valueToSum: Double(count),
             parameters: parameters
         )
-        print("📊 Facebook: Contacts added - \(count) from \(source)")
     }
 
     /// Track when user creates contact group
@@ -264,7 +186,6 @@ class FacebookAnalyticsService {
             .init("ContactGroupCreated"),
             parameters: parameters
         )
-        print("📊 Facebook: Contact group created - \(contactCount) contacts")
     }
 
     // MARK: - Engagement Events
@@ -272,7 +193,6 @@ class FacebookAnalyticsService {
     /// Track when user views analytics/dashboard
     func trackAnalyticsViewed() {
         AppEvents.shared.logEvent(.init("ViewAnalytics"))
-        print("📊 Facebook: Analytics viewed")
     }
 
     /// Track when user schedules a campaign
@@ -285,7 +205,6 @@ class FacebookAnalyticsService {
             .init("CampaignScheduled"),
             parameters: parameters
         )
-        print("📊 Facebook: Campaign scheduled - \(hoursAhead) hours ahead")
     }
 
     // MARK: - Custom Conversion Events
@@ -304,7 +223,6 @@ class FacebookAnalyticsService {
             .init(name),
             parameters: fbParameters
         )
-        print("📊 Facebook: Custom event - \(name)")
     }
 
     // MARK: - Attribution & Deep Linking
@@ -313,6 +231,5 @@ class FacebookAnalyticsService {
     func handleAppLink(url: URL) {
         // Facebook SDK automatically handles app links
         // You can add custom handling here if needed
-        print("📊 Facebook: App link received - \(url.absoluteString)")
     }
 }

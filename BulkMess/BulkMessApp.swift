@@ -110,9 +110,7 @@ struct BulkMessApp: App {
                     if #available(iOS 14, *) {
                         // Delay to let paywall close and main view settle
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            FacebookAnalyticsService.shared.requestTrackingPermission { granted in
-                                print("📊 Facebook: ATT permission \(granted ? "granted" : "denied") by user")
-                            }
+                            FacebookAnalyticsService.shared.requestTrackingPermission()
                             // Mark as requested so we don't ask again
                             hasRequestedATTPermission = true
                         }
