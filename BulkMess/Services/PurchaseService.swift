@@ -72,6 +72,15 @@ class PurchaseService: ObservableObject {
                 case .verified(let transaction):
                     isPurchased = true
                     purchaseState = .purchased
+
+                    // Track Facebook purchase event
+                    let amount = NSDecimalNumber(decimal: product.price).doubleValue
+                    let plan = product.id == weeklyProductID ? "weekly" : "yearly"
+                    FacebookAnalyticsService.shared.trackSubscriptionPurchase(
+                        plan: plan,
+                        amount: amount
+                    )
+
                     await transaction.finish()
                 case .unverified:
                     purchaseState = .failed(PurchaseError.verificationFailed)
@@ -141,6 +150,9 @@ class PurchaseService: ObservableObject {
         if transaction.productID == weeklyProductID || transaction.productID == yearlyProductID {
             isPurchased = true
             purchaseState = .purchased
+
+            // Note: Facebook purchase event is tracked in purchase() function
+            // to avoid duplicate tracking when this listener fires
         }
         await transaction.finish()
     }
