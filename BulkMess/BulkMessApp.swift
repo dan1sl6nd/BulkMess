@@ -103,10 +103,10 @@ struct BulkMessApp: App {
                 // Activate Facebook Analytics
                 FacebookAnalyticsService.shared.activateApp()
             }
-            .onChange(of: purchaseService.isPurchased) { isPurchased in
+            .onChange(of: purchaseService.isPurchased) { oldValue, newValue in
                 // Request ATT permission after successful purchase (only once)
                 // This is the best time because user has shown value by subscribing
-                if isPurchased && !hasRequestedATTPermission {
+                if newValue && !hasRequestedATTPermission {
                     if #available(iOS 14, *) {
                         // Delay to let paywall close and main view settle
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
